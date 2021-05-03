@@ -17,7 +17,7 @@ export default function Hogwarts(){
             <p></p>
             <h5>{student.firstName} {student.lastName}</h5>
             <p>{student.house}</p>
-            <p>{student.playsQuidditch ? "yes" : "no"}</p>
+            <p>{student.playsQuidditch ? "plays Quidditch" : "doesn't play Quidditch"}</p>
           </div>
         )
       })}
