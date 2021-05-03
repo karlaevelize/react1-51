@@ -1,4 +1,5 @@
 import data from "../data.json"
+import HogwartsCard from "./HogwartsCard"
 
 export default function Hogwarts(){
 
@@ -13,11 +14,18 @@ export default function Hogwarts(){
       <h3>Students</h3>
       {students.map((student, i) => {
         return (
-          <div key={student.id}> 
-            <p></p>
+          <div key={student.id}>
+            <HogwartsCard 
+              firstName={student.firstName}
+              lastName={student.lastName}
+              house={student.house}
+              age={student.age}
+              playsQuidditch={student.playsQuidditch}
+            />
+            {/* <p></p>
             <h5>{student.firstName} {student.lastName}</h5>
             <p>{student.house}</p>
-            <p>{student.playsQuidditch ? "plays Quidditch" : "doesn't play Quidditch"}</p>
+            <p>{student.playsQuidditch ? "plays Quidditch" : "doesn't play Quidditch"}</p> */}
           </div>
         )
       })}
